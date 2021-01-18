@@ -4,7 +4,7 @@ import {menu, image} from '../data'
 const images = image[0]
 
 export default function Nav() {
-    return <div>
+    return <div className="content-padding">
         <div className="logoright"><img src={images.logoright} alt="" style={{ width: 125, marginBottom: -10, marginLeft: 580 }} /></div>
         <ul className="nav">
             <li className="nav-item">
