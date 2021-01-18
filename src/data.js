@@ -37,5 +37,28 @@ export const image = [
     }
 ]
 
+export const mineralData = [
+    {
+        'image': metalsminerals,
+        'title': 'Metals & Minerals'
+    },
+    {
+        'image': infrastructure,
+        'title': 'Infrastructure'
+    },
+    {
+        'image': industrial,
+        'title': 'Industrial'
+    },
+    {
+        'image': energy,
+        'title': 'Energy'
+    },
+    {
+        'image': water,
+        'title': 'Water'
+    },
+]
+
 export const menu = ["HOME", "ABOUT", "MARKETS", "SERVICES", "PROJECTS", "CAREERS", "NEWS", "CONTACT US"]
 

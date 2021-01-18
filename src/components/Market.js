@@ -1,44 +1,26 @@
 
-import { image } from '../data'
+import { mineralData } from '../data'
 
-const images = image[0]
 
 export default function Market() {
     return <div className="content-padding">
         <div className="ourmarket">
-            <br></br>
-            <h2>OUR MARKETS</h2>
-            <br></br>
-            <br></br>
-            <div className="row">
-                <div className="column_ourmarkets">
-                </div>
-                <div className="column_ourmarkets">
-                    <img src={images.metalsminerals} className="images_our_markets" />
-                    <p>Metals & Minerals</p>
-                </div>
-                <div className="column_ourmarkets">
-                    <img src={images.infrastructure} className="images_our_markets" />
-                    <p>Infrastructure</p>
-                </div>
-                <div className="column_ourmarkets">
-                    <img src={images.industrial} className="images_our_markets" />
-                    <p>Industrial</p>
-                </div>
-                <div className="column_ourmarkets">
-                    <img src={images.energy} className="images_our_markets" />
-                    <p>Energy</p>
-                </div>
-                <div className="column_ourmarkets">
-                    <img src={images.water} className="images_our_markets" />
-                    <p>Water</p>
-                </div>
+            <h2 style={{padding:'30px'}}>OUR MARKETS</h2>
+            <div style={{padding:'30px'}} className="row">
+                <div className="column_ourmarkets"></div>
+                {
+                    mineralData.map((x, ind) => (
+                        <div key={ind} className="column_ourmarkets">
+                            <img src={x.image} className="images_our_markets" />
+                            <p>{x.title}</p>
+                        </div>
+                    ))
+                }
             </div>
-            <br></br>
-            <br></br>
-            <button type="button" className="btn btn-primary centre button">VIEW ALL MARKETS</button>
-            <br></br>
-            <br></br>
+            <div style={{padding:'30px',}}>
+               <button type="button"  className="btn btn-primary centre button">VIEW ALL MARKETS</button>  
+            </div>
+            
         </div>
     </div>
 }
