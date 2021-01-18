@@ -11,7 +11,7 @@ export default function Market() {
                 {
                     mineralData.map((x, ind) => (
                         <div key={ind} className="column_ourmarkets">
-                            <img src={x.image} className="images_our_markets" />
+                            <img src={x.image} alt="" className="images_our_markets" />
                             <p>{x.title}</p>
                         </div>
                     ))
