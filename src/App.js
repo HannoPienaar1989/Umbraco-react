@@ -18,6 +18,8 @@ import linked from './assets/linkedin.png';
 import youtube from './assets/youtube.png';
 import twitter from './assets/twitter.png';
 
+const menus = ["HOME", "ABOUT", "MARKETS", "SERVICES", "PROJECTS", "CAREERS", "NEWS", "CONTACT US"]
+
 function App() {
   return (
     <div className="App">
@@ -32,30 +34,13 @@ function App() {
           <div className="header-image-text-two">from the Earth's surface down.</div>
           <img src={logoleft} alt="" style={{ width: 200, marginTop: 20 }} />
         </li>
-        <li className="nav-item">
-          <a className="nav-link">HOME</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link">ABOUT</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link">MARKETS</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link">SERVICES</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link">PROJECTS</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link">CAREERS</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link">NEWS</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link">CONTACT US</a>
-        </li>
+        {
+          menus.map((x, ind) => (
+            <li className="nav-item">
+              <a key={ind} className="nav-link footer-text">{x}</a>
+            </li>
+          ))
+        }
       </ul>
       <header className="App-header">
       </header>
@@ -207,7 +192,7 @@ function App() {
             <a className="nav-link"></a>
           </li>
           {
-            ["HOME", "ABOUT", "MARKETS", "SERVICES", "PROJECTS", "CAREERS", "NEWS", "CONTACT US"].map((x, ind) => (
+            menus.map((x, ind) => (
               <li className="nav-item">
                 <a key={ind} className="nav-link footer-text">{x}</a>
               </li>
