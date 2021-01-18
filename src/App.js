@@ -35,12 +35,12 @@ function App() {
           <img src={logoleft} alt="" style={{ width: 200, marginTop: 20 }} />
         </li>
         {
-          menus.map((x, ind) => (
-            <li className="nav-item">
-              <a key={ind} className="nav-link footer-text">{x}</a>
-            </li>
-          ))
-        }
+            menus.map((x, ind) => (
+              <li className="nav-item">
+                <a key={ind} className="nav-link">{x}</a>
+              </li>
+            ))
+          }
       </ul>
       <header className="App-header">
       </header>
